@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             int maxDelay = accelerometer.getMaxDelay();
             String message = "Resolution: " + res + " Range: " + range + " Min delay: " + minDelay;
             v.setText(message.toCharArray(), 0, message.length());
-            sm.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+            sm.registerListener(this, accelerometer, SENSOR_DURATION);
         } else {
             String message = "No accelerometer detected";
             v.setText(message.toCharArray(), 0, message.length());
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             int maxDelay = gyroscope.getMaxDelay();
             String message = "Resolution: " + res + " Range: " + range + " Min delay: " + minDelay;
             v.setText(message.toCharArray(), 0, message.length());
-            sm.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+            sm.registerListener(this, accelerometer, SENSOR_DURATION);
         } else {
             String message = "No gyroscope detected";
             v.setText(message.toCharArray(), 0, message.length());
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onResume() {
         super.onResume();
-        sm.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        sm.registerListener(this, accelerometer, SENSOR_DURATION);
     }
 
     public void startAccelerometerActivity(View v) {

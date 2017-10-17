@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.example.rohan.plottingsensors.PlotGyroscopeActivity">
 
@@ -15,13 +16,20 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_height="700px" />
+        android:layout_height="350dp" />
 
     <Button
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_back_button"
         android:background="@color/lightGrey"
         android:onClick="goBack" />
+
+    <ImageView
+        android:id="@+id/gyroscope_animation"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
